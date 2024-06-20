@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scheduler>
+    <!-- Attributes -->
+    <!-- transactionTimeout in milliSeconds -->
+    <!--  job name='test' classname= 'com.omega.mainapp.TestJob' transactionTimeout='1800'/ -->
+    <job name='SendScheduledNotifications' classname= 'com.omega.mainapp.scheduled.jobs.SendScheduledNotifications' transactionTimeout='300000'/>
+
+</scheduler>

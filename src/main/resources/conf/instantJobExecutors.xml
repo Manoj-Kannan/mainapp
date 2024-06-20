@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<executors>
+    <!-- Attributes -->
+    <!-- dataRetention in days -->
+    <!-- pollingFrequency in milliseconds -->
+    <executor name="default" maxThreads="10" queueSize="100" dataRetention="3" pollingFrequency="5000"/>
+</executors>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instantjob>
+    <!-- Attributes -->
+    <!-- transactionTimeout in seconds -->
+    <!--  job name='test' classname= 'com.omega.mainapp.TestJob' transactionTimeout='1800'/ -->
+    <job name='SendInstantNotification' classname= 'com.omega.mainapp.instant.jobs.SendInstantNotification' transactionTimeout='300'/>
+
+</instantjob>

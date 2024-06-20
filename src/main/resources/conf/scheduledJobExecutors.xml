@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<executors>
+    <!-- Attributes -->
+    <!-- period in milliseconds -->
+    <executor name="priority" period="60" threads="25" />
+    <executor name="default" period="300" threads="25" maxRetry="2" />
+</executors>
