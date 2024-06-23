@@ -6,6 +6,11 @@ import com.omega.mainapp.utils.EmailUtils;
 
 public abstract class AbstractJobConfig implements JobConfig {
     @Override
+    public long getServerId() {
+        return 0;
+    }
+
+    @Override
     public abstract String getJobFilePath();
 
     @Override

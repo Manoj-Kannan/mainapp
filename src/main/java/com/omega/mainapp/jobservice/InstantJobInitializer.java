@@ -7,9 +7,12 @@ import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 import com.omega.mainapp.utils.FileUtils;
 import org.apache.commons.chain.Context;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
 @Component
 public class InstantJobInitializer {
+    private static final Logger LOGGER = LogManager.getLogger(InstantJobInitializer.class.getName());
     private static final String INSTANT_JOBS_FILE = FileUtils.normalizePath("conf/instantJobs.xml");
     private static final String INSTANT_JOB_EXECUTOR_FILE = FileUtils.normalizePath("conf/instantJobExecutors.xml");
 
@@ -34,13 +37,13 @@ public class InstantJobInitializer {
 
     @EventListener
     public static void init(ContextRefreshedEvent event) throws Exception {
-        System.out.println("Application context refreshed - InstantJobInitializer");
+        LOGGER.info("Application context refreshed - InstantJobInitializer");
         InstantJobController.initScheduler(new InstantJobConfigImpl());
     }
 
     @EventListener
     public static void stopExecutors(ContextClosedEvent event) {
-        System.out.println("Application context closed - InstantJobInitializer");
+        LOGGER.info("Application context closed - InstantJobInitializer");
         InstantJobController.stopExecutors();
     }
 
